@@ -1,0 +1,6 @@
+[framework/core]
+consolelogging=true
+loglevel=3
+sessionlogging=true
+sessiontlvlogging=true
+timestampoutput=true
